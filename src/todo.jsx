@@ -23,7 +23,7 @@ function Todo() {
     };
 
     fetchTasks();
-  }, [apiUrl]);
+  }, []);
 
   const addTask = async () => {
     const taskName = newTaskInputValue.trim();
@@ -47,7 +47,7 @@ function Todo() {
 
   const toggleTask = async (taskId, completed) => {
     try {
-      const response = await fetch(`${apiUrl}/updateTask/${taskId}`, {
+      const response = await fetch(`${apiUrl}/Completed/${taskId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
